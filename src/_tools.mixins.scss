@@ -1,0 +1,180 @@
+/**
+ * SETTINGS & PLACEHOLDERS
+ */
+@mixin flexi-border-box {
+  box-sizing: border-box;
+}
+
+%flexi-border-box {
+  @include flexi-border-box;
+}
+
+@mixin flexi-column-base {
+  @include flexi-border-box;
+  flex: 0 0 auto;
+}
+
+%flexi-column-base {
+  @include flexi-column-base;
+}
+
+@mixin flexi-column-base-auto {
+  @include flexi-border-box;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+%flexi-column-base-auto {
+  @include flexi-column-base-auto;
+}
+
+@mixin flexi-grid-base {
+  @include flexi-border-box;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 0 1 auto;
+  height: 100%;
+}
+
+%flexi-grid-base {
+  @include flexi-grid-base;
+}
+
+/**
+ * CLASS GENERATION
+ */
+@mixin flexi-grid-container-initial($grid-namespace, $column-namespace, $gutter: 16) {
+  .#{$grid-namespace} {
+    @extend %flexi-border-box;
+    @extend %flexi-grid-base;
+    margin: -#{to-rem($gutter/2)};
+
+    &--no-gutter {
+      margin: 0;
+
+      div[class*=' #{$column-namespace}'],
+      div[class^='#{$column-namespace}'] {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+@mixin flexi-grid-container-responsive($grid-namespace, $grid-settings) {
+  @each $breakpoint, $config in $grid-settings {
+    @media (min-width: to-em(map-get($config, width))) {
+      .#{$grid-namespace} {
+        margin: -#{to-rem(map-get($config, gutter) / 2)};
+      }
+    }
+  }
+}
+
+@mixin flexi-grid-container-alignment($grid-namespace, $grid-settings) {
+  @each $breakpoint, $config in $grid-settings {
+    @media (min-width: to-em(map-get($config, width))) {
+      .#{$grid-namespace}-#{$breakpoint}-align-items--top {
+        align-items: flex-start;
+      }
+
+      .#{$grid-namespace}-#{$breakpoint}-align-items--middle {
+        align-items: center;
+      }
+
+      .#{$grid-namespace}-#{$breakpoint}-align-items--bottom {
+        align-items: flex-end;
+      }
+
+      .#{$grid-namespace}-#{$breakpoint}-align-items--left {
+        justify-content: flex-start;
+      }
+
+      .#{$grid-namespace}-#{$breakpoint}-align-items--center {
+        justify-content: center;
+      }
+
+      .#{$grid-namespace}-#{$breakpoint}-align-items--right {
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+@mixin flexi-columns-initial($column-namespace, $grid-settings, $grid-size) {
+  @each $breakpoint in map-keys($grid-settings) {
+    // Auto sizing columns
+    .#{$column-namespace}-#{$breakpoint} {
+      @extend %flexi-column-base-auto;
+    }
+
+    // Shared column settings
+    @for $i from 1 through $grid-size {
+      .#{$column-namespace}-#{$breakpoint}-#{$i} {
+        @extend %flexi-column-base;
+      }
+    }
+  }
+}
+
+@mixin flexi-columns-responsive($column-namespace, $grid-settings, $grid-size) {
+  @each $breakpoint, $config in $grid-settings {
+    @media (min-width: to-em(map-get($config, width))) {
+      @for $i from 1 through $grid-size {
+        .#{$column-namespace}-#{$breakpoint}-#{$i} {
+          flex-basis: percentage($i/$grid-size);
+          max-width: percentage($i/$grid-size);
+        }
+
+        .#{$column-namespace}-#{$breakpoint}-offset-#{$i} {
+          margin-left: percentage($i/$grid-size);
+        }
+      }
+
+      @each $bp in map-keys($grid-settings) {
+        @for $i from 1 through $grid-size {
+          .#{$column-namespace}-#{$bp}-#{$i} {
+            padding: to-rem(map-get($config, gutter) / 2);
+          }
+        }
+
+        .#{$column-namespace}-#{$bp} {
+          padding: to-rem(map-get($config, gutter) / 2);
+        }
+      }
+    }
+  }
+}
+
+@mixin flexi-columns-alignment($column-namespace, $grid-settings, $grid-size) {
+  @each $breakpoint, $config in $grid-settings {
+    @media (min-width: to-em(map-get($config, width))) {
+      .#{$column-namespace}-#{$breakpoint}-align-self--top {
+        margin-bottom: auto;
+      }
+
+      .#{$column-namespace}-#{$breakpoint}-align-self--middle {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      .#{$column-namespace}-#{$breakpoint}-align-self--bottom {
+        margin-top: auto;
+      }
+
+      .#{$column-namespace}-#{$breakpoint}-align-self--left {
+        margin-right: auto;
+      }
+
+      .#{$column-namespace}-#{$breakpoint}-align-self--center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .#{$column-namespace}-#{$breakpoint}-align-self--right {
+        margin-left: auto;
+      }
+    }
+  }
+}

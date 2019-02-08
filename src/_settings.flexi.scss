@@ -1,0 +1,29 @@
+$flexi-grid-base-gutter: 16 !default;
+$flexi-grid-size: 12 !default;
+$flexi-grid-column-namespace: 'col' !default;
+$flexi-grid-container-namespace: 'grid' !default;
+
+$flexi-grid-breakpoints-default: (
+  xs: (
+    width: 0,
+    gutter: 16,
+  ),
+  sm: (
+    width: 600,
+    gutter: 24,
+  ),
+  md: (
+    width: 1024,
+    gutter: 24,
+  ),
+  lg: (
+    width: 1440,
+    gutter: 24,
+  ),
+  xl: (
+    width: 1920,
+    gutter: 24,
+  ),
+);
+
+$flexi-grid-breakpoints: () !default;

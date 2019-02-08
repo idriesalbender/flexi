@@ -1,0 +1,99 @@
+@function list-contains($list, $value) {
+  // $contains: false;
+  @each $key in $list {
+    @if $key == $value {
+      @return true;
+    }
+  }
+  @return false;
+}
+
+@function map-diff($map1, $map2, $findOverlap: false) {
+  $diff: ();
+  $master: $map1;
+  $comparator: $map2;
+
+  @if type-of($comparator) == map {
+    $comparator: map-keys($map2);
+  }
+
+  @if type-of($master) == map {
+    $master: map-keys($map2);
+  }
+
+  @each $key in $comparator {
+    @if list-contains($master, $key) == $findOverlap {
+      $diff: append($diff, $key);
+    }
+  }
+
+  @return $diff;
+}
+
+@function settings-are-valid($map) {
+  $result: true;
+  $validSettings: (width, gutter);
+
+  @each $key, $value in $map {
+    @if length(map-diff($validSettings, $value)) > 0 {
+      $result: false;
+    } @else if length(map-diff($value, $validSettings)) > 0 {
+      $result: false;
+    }
+
+    @if $result == false {
+      @return result;
+    }
+  }
+
+  @return $result;
+}
+
+@function build-settings-breakpoints($defaultMap, $customMap) {
+  // initialize result
+  $result: $defaultMap;
+  $diff: map-diff($defaultMap, $customMap);
+  $overlap: map-diff($defaultMap, $customMap, true);
+
+  // IF custom map has new keys, verify settings keys, then add those to result
+  @if length($diff) > 0 {
+    @each $key in $diff {
+      @if settings-are-valid(map-get($customMap, $key)) {
+        $result: map-merge(
+          $result,
+          (
+            $key: map-get($customMap, $key),
+          )
+        );
+      } @else {
+        @error 'Invalid settings map provided!';
+      }
+    }
+  }
+
+  // IF custom map has overlapping keys, verify settings keys, then override overlaps to result
+  @if length($overlap) > 0 {
+    @each $key in $overlap {
+      @if settings-are-valid(map-get($customMap, $key)) {
+        $result: map-merge(
+          $result,
+          (
+            $key: map-get($customMap, $key),
+          )
+        );
+      } @else {
+        @error 'Invalid settings map provided!';
+      }
+    }
+  }
+
+  @return $result;
+}
+
+@function to-em($value) {
+  @return #{$value/16}em;
+}
+
+@function to-rem($value) {
+  @return #{$value/16}rem;
+}

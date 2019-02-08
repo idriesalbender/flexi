@@ -1,0 +1,31 @@
+$flexi-grid-config: build-settings-breakpoints(
+  $flexi-grid-breakpoints-default,
+  $flexi-grid-breakpoints
+);
+
+@include flexi-grid-container-initial(
+  $flexi-grid-container-namespace,
+  $flexi-grid-column-namespace,
+  $flexi-grid-base-gutter
+);
+
+@include flexi-grid-container-responsive($flexi-grid-container-namespace, $flexi-grid-config);
+@include flexi-grid-container-alignment($flexi-grid-container-namespace, $flexi-grid-config);
+
+@include flexi-columns-initial(
+  $flexi-grid-column-namespace,
+  $flexi-grid-config,
+  $flexi-grid-size
+);
+
+@include flexi-columns-responsive(
+  $flexi-grid-column-namespace,
+  $flexi-grid-config,
+  $flexi-grid-size
+);
+
+@include flexi-columns-alignment(
+  $flexi-grid-column-namespace,
+  $flexi-grid-config,
+  $flexi-grid-size
+);

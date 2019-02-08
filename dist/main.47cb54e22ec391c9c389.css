@@ -1,0 +1,25 @@
+.o-col-xs-1, .o-col-xs-2, .o-col-xs-3, .o-col-xs-4, .o-col-xs-5, .o-col-xs-6, .o-col-xs-7, .o-col-xs-8, .o-col-xs-9, .o-col-xs-10, .o-col-xs-11, .o-col-xs-12, .o-col-sm-1, .o-col-sm-2, .o-col-sm-3, .o-col-sm-4, .o-col-sm-5, .o-col-sm-6, .o-col-sm-7, .o-col-sm-8, .o-col-sm-9, .o-col-sm-10, .o-col-sm-11, .o-col-sm-12, .o-col-md-1, .o-col-md-2, .o-col-md-3, .o-col-md-4, .o-col-md-5, .o-col-md-6, .o-col-md-7, .o-col-md-8, .o-col-md-9, .o-col-md-10, .o-col-md-11, .o-col-md-12, .o-col-lg-1, .o-col-lg-2, .o-col-lg-3, .o-col-lg-4, .o-col-lg-5, .o-col-lg-6, .o-col-lg-7, .o-col-lg-8, .o-col-lg-9, .o-col-lg-10, .o-col-lg-11, .o-col-lg-12, .o-col-xl-1, .o-col-xl-2, .o-col-xl-3, .o-col-xl-4, .o-col-xl-5, .o-col-xl-6, .o-col-xl-7, .o-col-xl-8, .o-col-xl-9, .o-col-xl-10, .o-col-xl-11, .o-col-xl-12 {
+  box-sizing: border-box;
+  flex: 0 0 auto; }
+
+.o-col-xs, .o-col-sm, .o-col-md, .o-col-lg, .o-col-xl {
+  box-sizing: border-box;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%; }
+
+.o-col-xs-1, .o-col-xs-2, .o-col-xs-3, .o-col-xs-4, .o-col-xs-5, .o-col-xs-6, .o-col-xs-7, .o-col-xs-8, .o-col-xs-9, .o-col-xs-10, .o-col-xs-11, .o-col-xs-12, .o-col-sm-1, .o-col-sm-2, .o-col-sm-3, .o-col-sm-4, .o-col-sm-5, .o-col-sm-6, .o-col-sm-7, .o-col-sm-8, .o-col-sm-9, .o-col-sm-10, .o-col-sm-11, .o-col-sm-12, .o-col-md-1, .o-col-md-2, .o-col-md-3, .o-col-md-4, .o-col-md-5, .o-col-md-6, .o-col-md-7, .o-col-md-8, .o-col-md-9, .o-col-md-10, .o-col-md-11, .o-col-md-12, .o-col-lg-1, .o-col-lg-2, .o-col-lg-3, .o-col-lg-4, .o-col-lg-5, .o-col-lg-6, .o-col-lg-7, .o-col-lg-8, .o-col-lg-9, .o-col-lg-10, .o-col-lg-11, .o-col-lg-12, .o-col-xl-1, .o-col-xl-2, .o-col-xl-3, .o-col-xl-4, .o-col-xl-5, .o-col-xl-6, .o-col-xl-7, .o-col-xl-8, .o-col-xl-9, .o-col-xl-10, .o-col-xl-11, .o-col-xl-12 {
+  box-sizing: border-box;
+  flex: 0 0 auto; }
+
+.o-grid {
+  margin: -0.5rem; }
+
+.o-grid--no-gutter {
+    margin: 0; }
+
+.o-grid--no-gutter div[class*=' o-col'],
+    .o-grid--no-gutter div[class^='o-col'] {
+      margin: 0;
+      padding: 0; }
+
