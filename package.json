@@ -1,5 +1,5 @@
 {
-  "name": "flexi",
+  "name": "@idix/flexi",
   "version": "1.0.3",
   "description": "A mobile-first, lightweight flexbox grid system.",
   "main": "flexi.scss",
