@@ -3,27 +3,386 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Page Title</title>
+    <title>Flexi demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div class="grid grid-xs-align-items--middle">
-      <div class="col-xs-4">
-        <div class="c-paint">
-          col-4
+    <div class="o-container">
+      <h1>Responsive grid</h1>
+      <div class="grid c-paint--50">
+        <div class="col-xs-12">
+          <div class="c-paint  c-paint--300"></div>
         </div>
       </div>
-      <div class="col-xs-4">
-        <div class="c-paint">
-          col-6
+      <div class="grid c-paint--50">
+        <div class="col-xs-12 col-sm-1">
+          <div class="c-paint  c-paint--300"></div>
         </div>
-        <div class="grid">
-          <div class="col-xs-6">
-            <div class="c-paint c-paint--20">nested col-6</div>
+        <div class="col-xs-12 col-sm-11">
+          <div class="c-paint  c-paint--300"></div>
+        </div>
+      </div>
+      <div class="grid c-paint--50">
+        <div class="col-xs-12 col-sm-2">
+          <div class="c-paint  c-paint--300"></div>
+        </div>
+        <div class="col-xs-12 col-sm-10">
+          <div class="c-paint  c-paint--300"></div>
+        </div>
+      </div>
+      <div class="grid c-paint--50">
+        <div class="col-xs-12 col-sm-3">
+          <div class="c-paint  c-paint--300"></div>
+        </div>
+        <div class="col-xs-12 col-sm-9">
+          <div class="c-paint  c-paint--300"></div>
+        </div>
+      </div>
+      <div class="grid c-paint--50">
+        <div class="col-xs-12 col-sm-4">
+          <div class="c-paint  c-paint--300"></div>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+          <div class="c-paint  c-paint--300"></div>
+        </div>
+      </div>
+      <div class="grid c-paint--50">
+        <div class="col-xs-12 col-sm-5">
+          <div class="c-paint  c-paint--300"></div>
+        </div>
+        <div class="col-xs-12 col-sm-7">
+          <div class="c-paint  c-paint--300"></div>
+        </div>
+      </div>
+      <div class="grid c-paint--50">
+        <div class="col-xs-12 col-sm-6">
+          <div class="c-paint  c-paint--300"></div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="c-paint  c-paint--300"></div>
+        </div>
+      </div>
+    </div>
+    <div class="o-container">
+      <h1>No gutters</h1>
+      <div class="grid grid--no-gutter c-paint--50">
+        <div class="col-xs">
+          <div class="c-paint  c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint  c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint  c-paint--300"></div>
+        </div>
+      </div>
+      <div class="grid grid--no-gutter c-paint--50">
+        <div class="col-xs">
+          <div class="c-paint  c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint  c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint  c-paint--300"></div>
+        </div>
+      </div>
+    </div>
+    <div class="o-container">
+      <h1>Nested grids</h1>
+      <div class="grid c-paint--50">
+        <div class="col-xs">
+          <div class="c-paint  c-paint--300">
+            <div class="grid">
+              <div class="col-xs">
+                <div class="c-paint c-paint--700"></div>
+              </div>
+              <div class="col-xs">
+                <div class="c-paint c-paint--700"></div>
+              </div>
+            </div>
           </div>
-          <div class="col-xs-6">
-            <div class="c-paint c-paint--20">nested col-6</div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint  c-paint--300">
+            <div class="grid">
+              <div class="col-xs">
+                <div class="c-paint c-paint--700"></div>
+              </div>
+              <div class="col-xs">
+                <div class="c-paint c-paint--700"></div>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="o-container">
+      <h1>Auto-sizing columns</h1>
+      <div class="grid c-paint--50">
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+      </div>
+      <div class="grid c-paint--50">
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+      </div>
+      <div class="grid c-paint--50">
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+      </div>
+    </div>
+    <div class="o-container">
+      <h1>Alignment</h1>
+      <h2>At grid container level</h2>
+      <h3><code>.grid-[breakpoint]-align-items--top</code></h3>
+      <div class="grid grid-xs-align-items--top c-paint--50">
+        <div class="col-xs">
+          <div class="grid">
+            <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+            <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+          </div>
+        </div>
+        <div class="col-xs">
+          <div class="grid">
+            <div class="col-xs-12">
+              <div class="c-paint c-paint--300"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3><code>.grid-[breakpoint]-align-items--middle</code></h3>
+      <div class="grid grid-xs-align-items--middle c-paint--50">
+        <div class="col-xs">
+          <div class="grid">
+            <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+            <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+          </div>
+        </div>
+        <div class="col-xs">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+      </div>
+      <h3><code>.grid-[breakpoint]-align-items--bottom</code></h3>
+      <div class="grid grid-xs-align-items--bottom c-paint--50">
+        <div class="col-xs">
+          <div class="grid">
+            <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+            <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+          </div>
+        </div>
+        <div class="col-xs">
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+        </div>
+      </div>
+      <h3><code>.grid-[breakpoint]-align-items--left</code></h3>
+      <div class="grid grid-xs-align-items--left c-paint--50">
+        <div class="col-xs-4">
+          <div class="grid">
+            <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+        </div>
+      </div>
+      <h3><code>.grid-[breakpoint]-align-items--center</code></h3>
+      <div class="grid grid-xs-align-items--center c-paint--50">
+        <div class="col-xs-4">
+          <div class="grid">
+            <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+        </div>
+      </div>
+      <h3><code>.grid-[breakpoint]-align-items--right</code></h3>
+      <div class="grid grid-xs-align-items--right c-paint--50">
+        <div class="col-xs-4">
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+        </div>
+        <div class="col-xs-4">
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+        </div>
+      </div>
+      <h2>At column level</h2>
+      <h3><code>.col-[breakpoint]-align-self--top</code></h3>
+      <div class="grid c-paint--50">
+        <div class="col-xs-4">
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+        </div>
+        <div class="col-xs-4 col-xs-align-self--top">
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+        </div>
+      </div>
+      <h3><code>.col-[breakpoint]-align-self--middle</code></h3>
+      <div class="grid c-paint--50">
+        <div class="col-xs-4">
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+        </div>
+        <div class="col-xs-4 col-xs-align-self--middle">
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+        </div>
+      </div>
+      <h3><code>.col-[breakpoint]-align-self--bottom</code></h3>
+      <div class="grid c-paint--50">
+        <div class="col-xs-4">
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+        </div>
+        <div class="col-xs-4 col-xs-align-self--bottom">
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+        </div>
+      </div>
+      <h3><code>.col-[breakpoint]-align-self--left</code></h3>
+      <div class="grid c-paint--50">
+        <div class="col-xs-4">
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+        </div>
+        <div class="col-xs-4 col-xs-align-self--left">
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+        </div>
+      </div>
+      <h3><code>.col-[breakpoint]-align-self--center</code></h3>
+      <div class="grid c-paint--50">
+        <div class="col-xs-4">
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+        </div>
+        <div class="col-xs-4 col-xs-align-self--center">
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+        </div>
+      </div>
+      <h3><code>.col-[breakpoint]-align-self--right</code></h3>
+      <div class="grid c-paint--50">
+        <div class="col-xs-4">
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+        </div>
+        <div class="col-xs-4 col-xs-align-self--right">
+          <div class="col-xs-12"><div class="c-paint c-paint--300"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="o-container">
+      <h1>Offsets</h1>
+      <div class="grid c-paint--50">
+        <div class="col-xs-1 col-xs-offset-11">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+      </div>
+      <div class="grid c-paint--50">
+        <div class="col-xs-2 col-xs-offset-10">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+      </div>
+      <div class="grid c-paint--50">
+        <div class="col-xs-3 col-xs-offset-9">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+      </div>
+      <div class="grid c-paint--50">
+        <div class="col-xs-4 col-xs-offset-8">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+      </div>
+      <div class="grid c-paint--50">
+        <div class="col-xs-5 col-xs-offset-7">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+      </div>
+      <div class="grid c-paint--50">
+        <div class="col-xs-6 col-xs-offset-6">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+      </div>
+      <div class="grid c-paint--50">
+        <div class="col-xs-7 col-xs-offset-5">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+      </div>
+      <div class="grid c-paint--50">
+        <div class="col-xs-8 col-xs-offset-4">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+      </div>
+      <div class="grid c-paint--50">
+        <div class="col-xs-9 col-xs-offset-3">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+      </div>
+      <div class="grid c-paint--50">
+        <div class="col-xs-10 col-xs-offset-2">
+          <div class="c-paint c-paint--300"></div>
+        </div>
+      </div>
+      <div class="grid c-paint--50">
+        <div class="col-xs-11 col-xs-offset-1">
+          <div class="c-paint c-paint--300"></div>
         </div>
       </div>
     </div>
