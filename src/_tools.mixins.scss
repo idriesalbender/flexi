@@ -128,7 +128,7 @@
         }
 
         .#{$column-namespace}-#{$breakpoint}-offset-#{$i} {
-          margin-left: percentage($i/$grid-size);
+          margin-left: calc(#{percentage($i/$grid-size) - to-rem((map-get($config, gutter)))});
         }
       }
 
