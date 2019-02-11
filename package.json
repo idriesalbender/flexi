@@ -1,6 +1,6 @@
 {
   "name": "flexi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A mobile-first, lightweight flexbox grid system.",
   "main": "flexi.scss",
   "scripts": {
