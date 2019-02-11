@@ -42,12 +42,12 @@ In addition, it takes some cues from Material Design guidelines regarding breakp
 
 To get started quickly, simply include the built Flexi CSS file in your `<head>`.
 
-**Link:** google.com
+**Link:** [https://unpkg.com/@idix/flexi/dist/flexi.min.css](https://unpkg.com/@idix/flexi/dist/flexi.min.css)
 
 ```html
 <head>
   ...
-  <link rel="stylesheet" type="text/css" href="google.com" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@idix/flexi/dist/flexi.min.css" />
 </head>
 ```
 
