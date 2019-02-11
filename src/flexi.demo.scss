@@ -1,0 +1,43 @@
+@function to-em($value) {
+  @return #{$value/16}em;
+}
+
+@function to-rem($value) {
+  @return #{$value/16}rem;
+}
+
+$base-color: #643c95;
+
+$colors: (
+  50: #ece8f2,
+  100: #d1c5df,
+  200: #b29eca,
+  300: #9377b5,
+  400: #7b59a5,
+  500: #643c95,
+  600: #5c368d,
+  700: #522e82,
+  800: #482778,
+  900: #361a67,
+);
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: to-rem(16);
+}
+
+.c-paint {
+  min-height: to-rem(24);
+  border-radius: to-rem(4);
+  background-color: map-get($colors, 500);
+  font-family: monospace;
+  color: #ffffff;
+  text-align: center;
+}
+
+@each $hue, $value in $colors {
+  .c-paint--#{$hue} {
+    background-color: $value;
+  }
+}
