@@ -48,7 +48,7 @@
   .#{$grid-namespace} {
     @extend %flexi-border-box;
     @extend %flexi-grid-base;
-    margin: -#{to-rem($gutter/2)};
+    margin: 0 -#{to-rem($gutter/2)};
 
     &--no-gutter {
       margin: 0;
@@ -66,7 +66,7 @@
   @each $breakpoint, $config in $grid-settings {
     @media (min-width: to-em(map-get($config, width))) {
       .#{$grid-namespace} {
-        margin: -#{to-rem(map-get($config, gutter) / 2)};
+        margin: 0 -#{to-rem(map-get($config, gutter) / 2)};
       }
     }
   }
