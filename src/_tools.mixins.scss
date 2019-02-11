@@ -50,7 +50,7 @@
     @extend %flexi-grid-base;
     margin: 0 -#{to-rem($gutter/2)};
 
-    &--no-gutter {
+    @at-root #{&}#{&}--no-gutter {
       margin: 0;
 
       div[class*=' #{$column-namespace}'],
