@@ -23,8 +23,37 @@ $colors: (
 
 body {
   box-sizing: border-box;
+  min-width: to-rem(320);
   margin: 0;
-  padding: to-rem(16);
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    color: #212121;
+  }
+}
+
+h1 {
+  margin-top: to-rem(56);
+  // border-left: solid to-rem(4) lighten(#212121, 25%);
+  // padding-left: to-rem(16);
+}
+
+h2 {
+  font-weight: 400;
+}
+
+code {
+  color: lighten(#212121, 25%);
+  font-family: 'Lucida Console', Monaco, monospace;
+}
+
+.o-container {
+  max-width: to-em(1024);
+  margin: 0 auto;
+  padding: 0 to-rem(16);
 }
 
 .c-paint {
@@ -34,6 +63,13 @@ body {
   font-family: monospace;
   color: #ffffff;
   text-align: center;
+  border: to-rem(1) solid #212121;
+
+  p {
+    vertical-align: middle;
+    padding: to-rem(8);
+    margin: 0;
+  }
 }
 
 @each $hue, $value in $colors {
