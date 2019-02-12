@@ -66,7 +66,7 @@ yarn add @idix/flexi
 Then, include it in your stylesheet.
 
 ```scss
-@import '~@idix/flexi/flexi';
+@import '~@idix/flexi/src/flexi';
 ```
 
 ## Syntax
