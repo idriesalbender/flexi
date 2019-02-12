@@ -2,7 +2,7 @@
   "name": "@idix/flexi",
   "version": "1.0.5",
   "description": "A mobile-first, lightweight flexbox grid system.",
-  "main": "flexi.scss",
+  "main": "dist/flexi.min.css",
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "gulp build"
@@ -16,6 +16,7 @@
   ],
   "author": "iab",
   "license": "Apache-2.0",
+  "repository": "idriesalbender/flexi",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
