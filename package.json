@@ -1,6 +1,6 @@
 {
   "name": "@idix/flexi",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A mobile-first, lightweight flexbox grid system.",
   "main": "dist/flexi.min.css",
   "scripts": {
