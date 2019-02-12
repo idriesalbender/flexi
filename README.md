@@ -5,6 +5,8 @@
   A mobile-first, lightweight Flexbox grid system.
 </h6>
 
+![](https://img.shields.io/npm/dt/@idix/flexi.svg?style=flat) ![](https://img.shields.io/npm/v/@idix/flexi.svg?style=flat) ![](https://img.shields.io/npm/l/@idix/flexi.svg?style=flat) ![](https://img.shields.io/bundlephobia/minzip/@idix/flexi.svg?style=flat)
+
 - [Introduction](#introduction)
 - [Usage](#usage)
   - [Install](#install)
