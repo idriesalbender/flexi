@@ -56,7 +56,7 @@ class Header extends React.Component {
             </Column>
           </Grid>
           <Grid>
-            <Column xs={12} sm={6}>
+            <Column xs={12} sm={6} alignContentXs="center">
               <a
                 href="https://github.com/idriesalbender/flexi/releases/tag/v1.0.5"
                 className="mdc-button mdc-theme--secondary-bg"
@@ -66,7 +66,7 @@ class Header extends React.Component {
                 </span>
               </a>
             </Column>
-            <Column xs={12} sm={6}>
+            <Column xs={12} sm={6} alignContentXs="center">
               <a
                 href="https://github.com/idriesalbender/flexi"
                 className="mdc-button mdc-button--outlined c-button--outlined"
