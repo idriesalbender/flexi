@@ -18,6 +18,7 @@ const Column = ({
   alignContentMd,
   alignContentLg,
   alignContentXl,
+  className,
   offsetXs,
   offsetSm,
   offsetMd,
@@ -49,9 +50,9 @@ const Column = ({
 
   return (
     <div
-      className={CLASSLIST.join(' ')
+      className={`${className} ${CLASSLIST.join(' ')
         .replace('  ', ' ')
-        .trim()}
+        .trim()}`}
     >
       {children}
     </div>
@@ -69,6 +70,7 @@ Column.defaultProps = {
   alignContentMd: null,
   alignContentLg: null,
   alignContentXl: null,
+  className: '',
   offsetXs: null,
   offsetSm: null,
   offsetMd: null,
@@ -92,6 +94,7 @@ Column.propTypes = {
   alignContentLg: PropTypes.string,
   alignContentXl: PropTypes.string,
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
   offsetXs: PropTypes.number,
   offsetSm: PropTypes.number,
   offsetMd: PropTypes.number,
