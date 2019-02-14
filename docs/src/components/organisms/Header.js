@@ -58,7 +58,7 @@ class Header extends React.Component {
           <Grid>
             <Column xs={12} sm={6} alignContentXs="center">
               <a
-                href="https://github.com/idriesalbender/flexi/releases/tag/v1.0.5"
+                href="https://github.com/idriesalbender/flexi/releases/latest"
                 className="mdc-button mdc-theme--secondary-bg"
               >
                 <span className="mdc-button__label mdc-theme--on-secondary">
