@@ -175,6 +175,36 @@
       .#{$column-namespace}-#{$breakpoint}-align-self--right {
         margin-left: auto;
       }
+
+      .#{$column-namespace}-#{$breakpoint}-align-content--top {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .#{$column-namespace}-#{$breakpoint}-align-content--middle {
+        display: flex;
+        align-items: center;
+      }
+
+      .#{$column-namespace}-#{$breakpoint}-align-content--bottom {
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .#{$column-namespace}-#{$breakpoint}-align-content--left {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .#{$column-namespace}-#{$breakpoint}-align-content--center {
+        display: flex;
+        justify-content: center;
+      }
+
+      .#{$column-namespace}-#{$breakpoint}-align-content--right {
+        display: flex;
+        justify-content: flex-end;
+      }
     }
   }
 }
