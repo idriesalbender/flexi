@@ -1,0 +1,32 @@
+$spacing-scale: 112;
+
+$margin-axes: (
+  top: t,
+  right: r,
+  bottom: b,
+  left: l,
+);
+
+@for $i from 0 through $spacing-scale {
+  @if $i % 8 == 0 {
+    .u-m--#{$i} {
+      margin: to-rem($i) !important;
+    }
+
+    .u-mx--#{$i} {
+      margin-right: to-rem($i) !important;
+      margin-left: to-rem($i) !important;
+    }
+
+    .u-my--#{$i} {
+      margin-top: to-rem($i) !important;
+      margin-bottom: to-rem($i) !important;
+    }
+
+    @each $axis, $label in $margin-axes {
+      .u-m#{$label}--#{$i} {
+        margin-#{$axis}: to-rem($i) !important;
+      }
+    }
+  }
+}

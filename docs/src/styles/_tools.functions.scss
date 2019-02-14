@@ -1,0 +1,7 @@
+@function to-em($value) {
+  @return #{$value/16}em;
+}
+
+@function to-rem($value) {
+  @return #{$value/16}rem;
+}

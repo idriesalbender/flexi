@@ -1,3 +1,4 @@
 node_modules
-docs
-!docs/images
+docs/node_modules
+docs/public
+docs/.cache
