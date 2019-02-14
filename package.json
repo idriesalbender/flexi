@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "gulp build",
-    "deploy": "cd docs && gatsby build --prefix-paths && cd .. && gh-pages -d docs/public"
+    "deploy": "cd docs && gatsby build --prefix-paths && cd .. && gh-pages -d docs/public",
+    "test": "mocha src/test.js"
   },
   "keywords": [
     "css",
