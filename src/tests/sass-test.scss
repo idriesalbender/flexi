@@ -1,0 +1,14 @@
+@import '../../node_modules/sass-true/sass/true';
+@import '../flexi.scss';
+
+@include describe('to-em [function]') {
+  @include it('Converts given px value to em.') {
+    @include assert-equal(to-em(16), '1em');
+  }
+}
+
+@include describe('to-rem [function]') {
+  @include it('Converts given px value to rem.') {
+    @include assert-equal(to-rem(16), '1rem');
+  }
+}
