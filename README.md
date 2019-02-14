@@ -20,6 +20,8 @@
     - [Alignment](#alignment)
       - [At grid container level](#at-grid-container-level)
       - [At column level](#at-column-level)
+        - [Self](#self)
+        - [Contents](#contents)
     - [Offset](#offset)
 - [Material Design specs](#material-design-specs)
 - [Customizing](#customizing)
@@ -175,6 +177,8 @@ _**Example:** at `lg` breakpoint, align all columns to the middle._
 
 #### At column level
 
+##### Self
+
 To align a specific column within a grid container, use one of the following alignment classes on the column object:
 
 | Class                                 | Description                    | Axis   |
@@ -194,6 +198,32 @@ _**Example:** at `lg` breakpoint, justify single column to the right._
     <!-- your content here -->
   </div>
   <div class="col-xs col-lg-6 col-lg-align-self--right">
+    <!-- your content here -->
+  </div>
+</div>
+```
+
+##### Contents
+
+To align the contents of a column, use one of the following alignment classes on the column object:
+
+| Class                                    | Description                     | Axis   |
+| ---------------------------------------- | ------------------------------- | ------ |
+| `col-[breakpoint]-align-content--top`    | Align content to the top.       | block  |
+| `col-[breakpoint]-align-content--middle` | Align content along the middle. | block  |
+| `col-[breakpoint]-align-content--bottom` | Align content to the bottom.    | block  |
+| `col-[breakpoint]-align-content--left`   | Justify content to the left.    | inline |
+| `col-[breakpoint]-align-content--center` | Justify content to the center.  | inline |
+| `col-[breakpoint]-align-content--right`  | Justify content to the right.   | inline |
+
+_**Example:** at `lg` breakpoint, justify column content to the right._
+
+```html
+<div class="grid">
+  <div class="col-xs col-lg-4">
+    <!-- your content here -->
+  </div>
+  <div class="col-xs col-lg-6 col-lg-align-content--right">
     <!-- your content here -->
   </div>
 </div>
