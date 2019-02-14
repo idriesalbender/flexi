@@ -737,10 +737,10 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@idix/flexi@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@idix/flexi/-/flexi-1.0.7.tgz#771c67f2d7ac7e5cb5356d3e716b9a054065e92a"
-  integrity sha512-QLPPnU+KXRx+hGlirwlUsPqbyzIeXtO3a1iyTpp5woeSTYG6QtcpOMQMnUZ86WRzXCAX295RQR+fvhMoEO+GgQ==
+"@idix/flexi@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@idix/flexi/-/flexi-1.1.0.tgz#8817af7452730816b1459df7d2ef93aa78324fbb"
+  integrity sha512-yi2LELTmtb80MdNWmOF2PSz5D1CoFONO01F+9P45cfwTTHg87WricUhqqJ2prg2lNjVxSiJ+nDZuk8mo0Pzbqg==
 
 "@material/animation@^0.41.0":
   version "0.41.0"

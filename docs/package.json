@@ -46,6 +46,6 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "devDependencies": {
-    "@idix/flexi": "^1.0.7"
+    "@idix/flexi": "^1.1.0"
   }
 }
