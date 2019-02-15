@@ -1,7 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Grid = ({ children, noGutter, alignXs, alignSm, alignMd, alignLg, alignXl }) => {
+const Grid = ({
+  children,
+  noGutter,
+  className,
+  alignXs,
+  alignSm,
+  alignMd,
+  alignLg,
+  alignXl,
+}) => {
   const CLASSLIST = [
     'o-grid',
     noGutter ? 'o-grid--no-gutter' : '',
@@ -13,11 +22,7 @@ const Grid = ({ children, noGutter, alignXs, alignSm, alignMd, alignLg, alignXl 
   ];
 
   return (
-    <div
-      className={CLASSLIST.join(' ')
-        .replace('  ', ' ')
-        .trim()}
-    >
+    <div className={`${className} ${CLASSLIST.join(' ').replace('  ', ' ')}`.trim()}>
       {children}
     </div>
   );
@@ -25,6 +30,7 @@ const Grid = ({ children, noGutter, alignXs, alignSm, alignMd, alignLg, alignXl 
 
 Grid.defaultProps = {
   noGutter: false,
+  className: '',
   alignXs: null,
   alignSm: null,
   alignMd: null,
@@ -33,6 +39,7 @@ Grid.defaultProps = {
 };
 
 Grid.propTypes = {
+  className: PropTypes.string,
   alignXs: PropTypes.string,
   alignSm: PropTypes.string,
   alignMd: PropTypes.string,
