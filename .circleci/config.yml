@@ -38,7 +38,7 @@ jobs:
       - run:
           name: Publish release to GitHub
           command: |
-            VERSION=${git describe}
+            VERSION=${CIRCLE_TAG}
             ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ~/tmp/dist/flexi.min.css
   publish:
     working_directory: ~/tmp
@@ -49,7 +49,7 @@ jobs:
           at: ~/tmp
       - run:
           name: 'Authenticate with npm registry'
-          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/tmp/.npmrc
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/tmp/.npmrc
       - run:
           name: Publish to npm
           command: npm publish
