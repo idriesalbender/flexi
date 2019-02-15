@@ -49,11 +49,7 @@ const Column = ({
   ];
 
   return (
-    <div
-      className={`${className} ${CLASSLIST.join(' ')
-        .replace('  ', ' ')
-        .trim()}`}
-    >
+    <div className={`${className} ${CLASSLIST.join(' ').replace('  ', ' ')}`.trim()}>
       {children}
     </div>
   );
