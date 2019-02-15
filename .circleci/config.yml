@@ -38,7 +38,8 @@ jobs:
       - run:
           name: Publish release to GitHub
           command: |
-            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${CIRCLE_TAG} ~/tmp/dist/flexi.min.css
+            VERSION=${CIRCLE_TAG}
+            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} ~/tmp/dist/flexi.min.css
   publish:
     working_directory: ~/tmp
     docker:
