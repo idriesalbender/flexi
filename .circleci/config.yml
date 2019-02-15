@@ -10,10 +10,12 @@ jobs:
       - run: npm install
       - run: npm run build
   test:
+    working_directory: ~/tmp
     docker:
       - image: circleci/node:10
     steps:
-      - checkout
+      - attach_workspace:
+          at: ~/tmp
       - run: npm test
   release:
     working_directory: ~/tmp
