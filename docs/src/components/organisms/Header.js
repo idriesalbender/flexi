@@ -30,10 +30,13 @@ class Header extends React.Component {
         <Container fullWidth>
           <Grid>
             <Column xs={12}>
-              <p align="center">
+              <p align="center" className="u-mt--88 u-mb--24">
                 <Logo role="img" aria-label="Flexi" width={252} height={96} />
               </p>
-              <h6 align="center" className="mdc-typography--headline6 mdc-theme--secondary">
+              <h6
+                align="center"
+                className="mdc-typography--headline6 mdc-theme--secondary u-mt--24 u-mb--56"
+              >
                 A mobile-first, lightweight flexbox grid system.
               </h6>
             </Column>
@@ -55,8 +58,8 @@ class Header extends React.Component {
               />
             </Column>
           </Grid>
-          <Grid>
-            <Column xs={12} sm={6} alignContentXs="center" className="u-my--32">
+          <Grid className="u-my--64">
+            <Column xs={12} sm={6} alignContentXs="center" alignContentSm="right">
               <a
                 href="https://github.com/idriesalbender/flexi/releases/latest"
                 className="mdc-button mdc-theme--secondary-bg"
@@ -66,7 +69,7 @@ class Header extends React.Component {
                 </span>
               </a>
             </Column>
-            <Column xs={12} sm={6} alignContentXs="center" className="u-my--32">
+            <Column xs={12} sm={6} alignContentXs="center" alignContentSm="left">
               <a
                 href="https://github.com/idriesalbender/flexi"
                 className="mdc-button mdc-button--outlined c-button--outlined"
