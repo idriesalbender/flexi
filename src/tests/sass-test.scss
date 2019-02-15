@@ -2,13 +2,89 @@
 @import '../flexi.scss';
 
 @include describe('to-em [function]') {
-  @include it('Converts given px value to em.') {
+  @include it('Converts given px value to em') {
     @include assert-equal(to-em(16), '1em');
   }
 }
 
 @include describe('to-rem [function]') {
-  @include it('Converts given px value to rem.') {
+  @include it('Converts given px value to rem') {
     @include assert-equal(to-rem(16), '1rem');
+  }
+}
+
+@include describe('list-contains [function]') {
+  @include it('Returns false if given key is not in given list') {
+    @include assert-false(list-contains((xs, sm, md, lg, xl), mdl));
+  }
+}
+
+@include describe('list-contains [function]') {
+  @include it('Returns true if given key is in given list') {
+    @include assert-true(list-contains((xs, sm, md, lg, xl), xl));
+  }
+}
+
+@include describe('flexi-border-box [mixin]') {
+  @include it('Outputs flexi border-box prop') {
+    @include assert {
+      @include output {
+        @include flexi-border-box;
+      }
+
+      @include expect {
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+@include describe('flexi-column-base [mixin]') {
+  @include it('Outputs base column props') {
+    @include assert {
+      @include output {
+        @include flexi-column-base;
+      }
+
+      @include expect {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+      }
+    }
+  }
+}
+
+@include describe('flexi-column-base-auto [mixin]') {
+  @include it('Outputs auto-sizing column props') {
+    @include assert {
+      @include output {
+        @include flexi-column-base-auto;
+      }
+
+      @include expect {
+        box-sizing: border-box;
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@include describe('flexi-grid-base [mixin]') {
+  @include it('Outputs base grid props') {
+    @include assert {
+      @include output {
+        @include flexi-grid-base;
+      }
+
+      @include expect {
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row wrap;
+        flex: 0 1 auto;
+        height: 100%;
+      }
+    }
   }
 }
