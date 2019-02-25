@@ -3,10 +3,11 @@ import Paragraph from '../components/atoms/Paragraph';
 import Phone from '../images/phone.svg';
 import Tablet from '../images/tablet.svg';
 import Image from '../components/atoms/Image';
+import Heading from '../components/atoms/Heading';
 
 export default () => (
   <>
-    <h1 className="mdc-typography--headline3 mdc-theme--secondary">Material Design Grid</h1>
+    <Heading size={2}>Material Design Grid</Heading>
     <Paragraph>
       The Flexi grid is based on Material Design guidelines. This means that gutter size will
       differ according to screen width.
