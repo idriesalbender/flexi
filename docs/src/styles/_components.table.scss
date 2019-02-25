@@ -1,0 +1,21 @@
+.c-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+
+  thead > tr {
+    border-bottom: solid to-rem(2) #ede8f2;
+
+    > th {
+      @extend .mdc-typography--subtitle2;
+      padding: 0 to-rem(8);
+      height: to-rem(48);
+    }
+  }
+
+  tbody > tr {
+    height: to-rem(48);
+    border-bottom: solid to-rem(1) #ede8f2;
+    @extend .mdc-typography--body2;
+  }
+}
