@@ -3,6 +3,10 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Container from '../components/atoms/Container';
+import Grid from '../components/atoms/Grid';
+import Column from '../components/atoms/Column';
+
+import MaterialDesignGrid from '../organisms/material-design-grid';
 
 const IndexPage = () => (
   <Layout>
@@ -11,9 +15,11 @@ const IndexPage = () => (
       keywords={['css', 'grid', 'flexbox', 'responsive', 'fluid', 'mobile-first']}
     />
     <Container>
-      <p align="center" className="mdc-typography--body1">
-        Docs coming soon!
-      </p>
+      <Grid>
+        <Column xs={12}>
+          <MaterialDesignGrid />
+        </Column>
+      </Grid>
     </Container>
   </Layout>
 );
