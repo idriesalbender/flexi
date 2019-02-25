@@ -3,7 +3,7 @@ import Heart from '../../images/heart.svg';
 import Paragraph from '../atoms/Paragraph';
 
 export default () => (
-  <footer className="mdc-typography--body2">
+  <footer className="mdc-typography--body2 u-mt--56">
     <p align="center">
       Made with <Heart /> by idriesalbender
     </p>
