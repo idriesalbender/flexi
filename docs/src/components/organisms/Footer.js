@@ -1,6 +1,5 @@
 import React from 'react';
 import Heart from '../../images/heart.svg';
-import Paragraph from '../atoms/Paragraph';
 
 export default () => (
   <footer className="mdc-typography--body2 u-mt--56">
