@@ -7,7 +7,7 @@ import Heading from '../components/atoms/Heading';
 
 export default () => (
   <>
-    <Heading size={2}>Material Design Grid</Heading>
+    <Heading size={2}>Material Design specs</Heading>
     <Paragraph>
       The Flexi grid is based on Material Design guidelines. This means that gutter size will
       differ according to screen width.
