@@ -1,0 +1,15 @@
+@for $i from 1 through 6 {
+  h#{$i} {
+    margin-top: to-rem(40);
+    margin-bottom: to-rem(16);
+  }
+}
+
+h2 {
+  margin-top: to-rem(96);
+  margin-bottom: to-rem(24);
+
+  &:first-child {
+    margin-top: to-rem(56);
+  }
+}
