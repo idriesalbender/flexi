@@ -7,12 +7,15 @@
 @import 'vendor.flexi';
 @import 'vendor.material';
 
+@import 'elements.code';
 @import 'elements.figure';
+@import 'elements.headings';
 @import 'elements.page';
 
 @import 'objects.container';
 
 @import 'components.buttons';
 @import 'components.header';
+@import 'components.table';
 
 @import 'trumps.spacing';
