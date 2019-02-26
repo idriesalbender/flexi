@@ -70,12 +70,16 @@ workflows:
           filters:
             tags:
               <<: *filter-semver
+            branches:
+              only: master
       - test:
           requires:
             - build
           filters:
             tags:
               <<: *filter-semver
+            branches:
+              only: master
       - release:
           requires:
             - build
@@ -83,6 +87,8 @@ workflows:
           filters:
             tags:
               <<: *filter-semver
+            branches:
+              only: master
       - publish:
           requires:
             - build
@@ -91,3 +97,5 @@ workflows:
           filters:
             tags:
               <<: *filter-semver
+            branches:
+              only: master
